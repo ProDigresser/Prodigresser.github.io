@@ -11,13 +11,6 @@ body {
 figure {
   margin: 0;
 }
-.devicon path {
-  fill: white;
-}
-.divicon {
-  height: 100px;
-  width: 100px;
-}
 
 .section, .content {
   display: flex;
@@ -31,10 +24,9 @@ figure {
 }
 
 #intro {
-  background-color: aliceblue;
-  min-height: 93vh;
-  background: url(../images/intro-bg.jpg) no-repeat center center;
-  background-size: cover;
+  min-height: 90vh;
+  background: url(../images/svg-bgs/HoneycombPage01.svg) no-repeat center center, white;
+  background-size: cover, cover;
   .image-container {
     padding: 20px;
     width: 400px;
@@ -109,8 +101,9 @@ figure {
     }
   }
   .title-container{
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.520045518207283) 0%, rgba(0,0,0,0.520045518207283) 0%, rgba(0,0,0,0.654499299719888) 0%);
+    background: rgb(74,74,74);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+    border-radius: 25px 0;
     margin: 40px;
     padding: 30px;
     width: 330px;
@@ -129,17 +122,17 @@ figure {
   }
 }
 .green{
-  color:rgb(34, 248, 34);
+  color:#D803F5;
 }
 
 #nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 7vh;
+  height: 10vh;
   min-height: 50px;
-  background-color: black;
-  border: white 4px solid;
+  background-color: #4A4A4A;
+  border: #D803F5 2px solid;
   border-left: none;
   border-right: none;
   justify-content: flex-end;
@@ -150,12 +143,12 @@ figure {
     list-style-type: none;
     padding: 0;
     .nav-button {
-      border: black 2px solid;
+      border: #4A4A4A 2px solid;
       border-radius: 4px;
       height: 7vh;
       min-height: 50px;
       background-color: white;
-      color: black;
+      color: #4A4A4A;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -167,36 +160,43 @@ figure {
 }
 
 #projects {
-  background-color: black;
+  background: url(../images/svg-bgs/HoneycombBorderWhite01.svg) no-repeat left bottom, #4A4A4A;
   min-height: 95vh;
   color: white;
+  .content {
+    flex-direction: column;
+    margin: 20px 0;
+  }
   .project-box {
-    margin: 40px 0;
+    margin: 20px 0;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     width: 800px;
+    background-color: black;
+    border-radius: 25px 0;
 
     article {
       height: 550px;
-      padding: 10px;
       margin: 10px;
     }
     .pt-one {
-      flex: 2;
+      flex: 7;
       border: deeppink 1px dashed;
       display: flex;
       flex-direction: column;
-      .proj-tech{
-        border: deeppink 1px dashed;
+      .project-skills.mapped-skills {
         flex: 1;
+        flex-wrap: nowrap;
+        height: 90px;
       }
       .proj-img{
         border: deeppink 1px dashed;
-        flex: 6;
+        flex: 8;
       }
     }
     .pt-two{
-      flex: 1;
+      flex: 2;
       display: flex;
       flex-direction: column;
       border: deeppink 1px dashed;
@@ -205,23 +205,46 @@ figure {
         border: deeppink 1px dashed;
       }
       .proj-nav {
+        display: flex;
+        flex-direction: row;
         flex: 1;
         border: deeppink 1px dashed;
+        height: 90px;
+        .page-link {
+          width: 90px;
+          height: 90px;
+        }
+        .skill-box {
+          width: 90px;
+          height: 90px;
+          margin: 0;
+          padding: 10px;
+        }
+        .skill-box:hover .name-container {
+          background: none;
+        }
+        .skill-box:hover svg path {
+          fill: #D803F5;
+        }
+
       }
     }
   }
 }
 
 #skills {
-  background-color: cornflowerblue;
+  background: url(../images/svg-bgs/HoneycombBorderBlack01.svg) no-repeat left bottom, white;
+  color: #FFFF;
   min-height: 95vh;
 
   .skills-box {
-    margin: 40px 0;
+    margin: 35px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 800px;
+    height: 100%;
+    
 
     .pt-one {
       flex: 1;
@@ -229,23 +252,33 @@ figure {
       flex-direction: column;
       .sec-title {
         flex: 4;
-        border: deeppink 1px dashed;
+        margin: 20px 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
       .learning {
         flex: 1;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border: deeppink 1px dashed;
-        .skill-box {
-          flex: 1;
-          height: 95px;
-          justify-content: center;
-          align-items: center;
+        flex-direction: column;
+        margin: 20px 30px 0;
+
+        h3 {
+          margin: 20px 0 10px;
+        }
+
+        .learning-skills {
           display: flex;
-          border: deeppink 1px dashed;
+          flex-direction: row;          
+          .skill-box {
+            flex: 1;
+            width: 100px;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+          }
         }
       }
     }
@@ -253,35 +286,68 @@ figure {
       flex: 2;
       display: flex;
       justify-content: center;
-      .mapped-skills {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        
-        .skill-box {
-          width: 25%;
-          height: 95px;
-          justify-content: center;
-          align-items: center;
-          display: flex;
-          border: deeppink 1px dashed;
-        }
-      }
+
     }
     article {
-      height: 550px;
+      height: 580px;
       padding: 10px;
       margin: 10px;
-      border: deeppink 1px dashed;
+      border-radius: 25px 0px;
+      background: rgb(74,74,74);
     }
   }
 }
 
+.mapped-skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+.skill-box{
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 5px;
+  .name-container {
+    position: absolute;
+    height: 95px;
+    width: 95px;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    background: rgb(74,74,74);
+    background: linear-gradient(0deg, rgba(74, 74, 74, 1) 0%, rgba(74,74,74,0.5) 100%);
+    transition: visibility 0s, opacity 0.25s linear;
+    p {
+      color: #D803F5;
+      text-align: center;
+      margin-top: 70%;
+      user-select: none;
+    }
+  }
+  img {
+    height: 80%;
+  }
+}
+.skill-box:hover .name-container {
+  visibility: visible;
+  opacity: 1;
+}
+  
+
+
+
+
+
+
 #exp {
-  background-color: lightgreen;
+  background: url(../images/svg-bgs/HoneycombBorderGrey01.svg) no-repeat left bottom, #000;
   min-height: 50vh;
   .exp-box {
     margin: 40px 0;
@@ -289,7 +355,9 @@ figure {
     flex-direction: row;
     justify-content: center;
     width: 800px;
-    border: deeppink 1px dashed;
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px 0;
 
     .pt-one {
       flex: 1;
@@ -418,7 +486,7 @@ figure {
     height: 115.47px;
     background-color: #ffffff;
     margin: 57.74px 0;
-    box-shadow: 0 0 20px rgba(0,0,0,0.75);
+    box-shadow: 0 0 20px rgba(74,74,74,0.75);
   }
   
   .hexagon:before,
@@ -433,7 +501,7 @@ figure {
     transform: scaleY(0.5774) rotate(-45deg);
     background-color: inherit;
     left: 29.2893px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.75);
+    box-shadow: 0 0 20px rgba(74,74,74,0.75);
   }
   
   .hexagon:before {
@@ -489,13 +557,13 @@ figure {
   }
   #skills {
     .skills-box{
-      flex-direction: column-reverse;
+      flex-direction: column;
       width: 90vw;
       min-width: 600px;
       .pt-one {
         height: 350px;
+        flex-direction: row;
         .learning{
-          align-self: center;
           width: 250px;
         }
       }

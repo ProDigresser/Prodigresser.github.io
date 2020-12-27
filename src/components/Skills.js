@@ -25,7 +25,7 @@ const skillArray = [
   { name: 'CSS', svg: css },
   { name: 'Git', svg: git },
   { name: 'Github', svg: github },
-  { name: 'JS', svg: javascript },
+  { name: 'JavaScript', svg: javascript },
   { name: 'React.js', svg: react },
   { name: 'Node.js', svg: node },
   { name: 'Express.js', svg: express },
@@ -47,20 +47,37 @@ const Skills = () => {
     <section className="content">
       <div className="skills-box">
         <article className="pt-one">
-          <div className="sec-title">title</div>
+          <div className="sec-title">
+            <div>
+              <h2><span className="green">//</span> Skills</h2>
+              <p>During my time as a student and developer I have covered a broad range of languages and technologies - a sample of which are mentioned here.</p>
+              <p>The core of my experience is based around JavaScript, Python and their respective frameworks. Personally, I enjoy developing on the Back-end - with experience using Node / Express and Python / Flask.</p>
+            </div>
+          </div>
           <div className="learning">
-            {learnArray.map((skill, i) => {
-              return <div className="skill-box" key={i}>
-                <img src={skill.svg} alt={skill.name} />
-              </div>
-            })}
+            <h3><span className="green">//</span> Learning</h3>
+            <div className="mapped-skills learning-skills">
+              {learnArray.map((skill, i) => {
+                return <div className="skill-box" key={i}>
+                  <div className="name-container" >
+                    <p>{skill.name}</p>
+
+                  </div>
+                  <img src={skill.svg} alt={skill.name} />
+                </div>
+              })}
+            </div>
           </div>
         </article>
         <article className="pt-two">
           <div className="mapped-skills">
             {skillArray.map((skill, i) => {
               return <div className="skill-box" key={i}>
-                <img src={skill.svg} alt={skill.name} />
+                <div className="name-container">
+                  <p>{skill.name}</p>
+                </div>
+
+                <img src={skill.svg} alt={skill.name} className="devicon" />
               </div>
             })}
           </div>

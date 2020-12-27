@@ -18,7 +18,7 @@ const Intro = () => {
           <h2>Web Developer</h2>
           <Typing.Delay ms={500} />
           <Typing.Speed ms={30} />
-          <h2>Hospitality Pro</h2>
+          <h2>Hospitality Pro<Typing.Speed ms={400} />...</h2>
         </Typing>
       </div>
       <figure className="image-container">
