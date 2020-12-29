@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+$roberto: 'Roboto Mono', monospace;
+
 * {
   box-sizing: border-box;
+  font-family: $roberto;
 }
 
 body {
@@ -21,6 +26,36 @@ figure {
 
 .content {
   max-width: 900px;
+}
+
+.buttons {
+  background: rgba(33,33,33,0.5);
+  height: 50px;
+  min-width: 300px;
+  width: 55vw;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.proj-button {
+  background: none;
+  border: none;
+  width: 45px;
+  color: white;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.proj-button:focus {
+  outline: 0;
+}
+
+.proj-button.is-active {
+  color: #D803F5;
 }
 
 #intro {
@@ -104,19 +139,19 @@ figure {
     background: rgb(74,74,74);
     background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
     border-radius: 25px 0;
-    margin: 40px;
-    padding: 30px;
-    width: 330px;
+    margin: 40px 10px 40px 0;
+    padding: 20px;
+    width: 390px;
     height: 400px;
     color: white;
     display: flex;
     flex-direction: column;
     .title {
-      font-size: 45px;
+      font-size: 40px;
       margin: 20px;
       margin-left: 10px;
     }
-    h2 {
+    h3 {
       margin-left: 40px;
     }
   }
@@ -128,10 +163,11 @@ figure {
 #nav {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 5;
   top: 0;
   height: 10vh;
   min-height: 50px;
-  background-color: #4A4A4A;
+  background-color: rgba(40,40,40,1);
   border: #D803F5 2px solid;
   border-left: none;
   border-right: none;
@@ -143,6 +179,7 @@ figure {
     list-style-type: none;
     padding: 0;
     .nav-button {
+      font-size: 14px;
       border: #4A4A4A 2px solid;
       border-radius: 4px;
       height: 7vh;
@@ -155,12 +192,13 @@ figure {
       align-items: center;
       width: 110px;
       margin: 0 5px;
+      font-weight: 700;
     }
   }
 }
 
 #projects {
-  background: url(../images/svg-bgs/HoneycombBorderWhite01.svg) no-repeat left bottom, #4A4A4A;
+  background: url(../images/svg-bgs/HoneycombBorderWhite01v2.svg) no-repeat left bottom, linear-gradient(180deg, rgb(74,74,74) 20%, rgb(44,44,44) 100%);
   min-height: 95vh;
   color: white;
   .content {
@@ -168,12 +206,13 @@ figure {
     margin: 20px 0;
   }
   .project-box {
-    margin: 20px 0;
-    padding: 20px;
+    margin: 0 0 20px 0;
+    padding: 20px 10px;
+    align-content: stretch;
     display: flex;
     flex-direction: row;
     width: 800px;
-    background-color: black;
+    background-color: rgb(44,44,44);
     border-radius: 25px 0;
 
     article {
@@ -181,34 +220,33 @@ figure {
       margin: 10px;
     }
     .pt-one {
-      flex: 7;
-      border: deeppink 1px dashed;
+      width: 560px;
       display: flex;
       flex-direction: column;
       .project-skills.mapped-skills {
         flex: 1;
         flex-wrap: nowrap;
-        height: 90px;
+        height: 100px;
+        justify-content: start;
+        .proj-name-cont.name-container {
+          background: linear-gradient(0deg, rgba(44,44,44, 1) 20%, rgba(44,44,44,0.5) 100%);
+        }
       }
       .proj-img{
-        border: deeppink 1px dashed;
         flex: 8;
       }
     }
     .pt-two{
-      flex: 2;
+      width: 190px;
       display: flex;
       flex-direction: column;
-      border: deeppink 1px dashed;
       .proj-text{
         flex: 8;
-        border: deeppink 1px dashed;
       }
       .proj-nav {
         display: flex;
         flex-direction: row;
         flex: 1;
-        border: deeppink 1px dashed;
         height: 90px;
         .page-link {
           width: 90px;
@@ -233,7 +271,7 @@ figure {
 }
 
 #skills {
-  background: url(../images/svg-bgs/HoneycombBorderBlack01.svg) no-repeat left bottom, white;
+  background: url(../images/svg-bgs/HoneycombBorderBlack01v2.svg) no-repeat left bottom, linear-gradient(180deg, rgb(255, 255, 255) 20%, rgba(44,44,44,0.7) 100%);
   color: #FFFF;
   min-height: 95vh;
 
@@ -252,20 +290,26 @@ figure {
       flex-direction: column;
       .sec-title {
         flex: 4;
-        margin: 20px 30px 0;
+        margin: 5px 30px 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        p {
+          font-size: 15px;
+          line-height: 14px;
+        }
       }
 
       .learning {
         flex: 1;
         display: flex;
         flex-direction: column;
-        margin: 20px 30px 0;
+        margin: 5px 30px 0;
 
         h3 {
-          margin: 20px 0 10px;
+          margin: 5px 0;
+
         }
 
         .learning-skills {
@@ -278,6 +322,7 @@ figure {
             justify-content: center;
             align-items: center;
             display: flex;
+            
           }
         }
       }
@@ -322,7 +367,7 @@ figure {
     opacity: 0;
     border-radius: 10px;
     background: rgb(74,74,74);
-    background: linear-gradient(0deg, rgba(74, 74, 74, 1) 0%, rgba(74,74,74,0.5) 100%);
+    background: linear-gradient(0deg, rgba(74, 74, 74, 1) 30%, rgba(74,74,74,0.5) 100%);
     transition: visibility 0s, opacity 0.25s linear;
     p {
       color: #D803F5;
@@ -339,22 +384,17 @@ figure {
   visibility: visible;
   opacity: 1;
 }
-  
-
-
-
-
-
 
 #exp {
-  background: url(../images/svg-bgs/HoneycombBorderGrey01.svg) no-repeat left bottom, #000;
-  min-height: 50vh;
+  background: url(../images/svg-bgs/HoneycombBorderGrey01v2.svg) no-repeat left bottom, #000;
+  min-height: 60vh;
   .exp-box {
     margin: 40px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 800px;
+    height: 280px;
     background-color: white;
     padding: 20px;
     border-radius: 25px 0;
@@ -366,53 +406,78 @@ figure {
       align-items: center;
       justify-content: center;
       .logo-cont {
-        height: 175px;
-        width: 175px;
-        border: deeppink 1px dashed;
+        height: 155px;
+        width: 155px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .logo {
+          height: 155px;
+          width: 155px;
+          padding: 5px;
+          
+        }
+        .subhead {
+          min-height: 50px;
+          h4 {
+            margin: 10px;
+            font-size: 14px;
+            margin: 5;
+            text-align: center;
+          }
+          
+        }
       }
     }
     .pt-two {
-      flex: 3;
+      flex: 4;
       display: flex;
       flex-direction: column;
-      border: deeppink 1px dashed;
       .description {
-        flex: 6;
-        border: deeppink 1px dashed;
-      }
-      .exp-nav {
         flex: 1;
+        h3 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .buttons.exp-nav {
         align-self: center;
-        border: deeppink 1px dashed;
+        height: 45px;
+        width: 80%;
+        border-radius: 15px;
       }
     }
     article {
       min-height: 200px;
       padding: 10px;
       margin: 10px;
-      border: deeppink 1px dashed;
     }
   }
 }
 
 #about {
-  background-color: lightcyan;
-  min-height: 70vh;
+  background: url(../images/svg-bgs/HoneycombBorderWhite01v2.svg) no-repeat left bottom, linear-gradient(180deg, rgb(74,74,74) 20%, rgb(11,11,11) 100%);
+  min-height: 80vh;
   .about-box {
     margin: 40px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 800px;
-    border: deeppink 1px dashed;
-
+    min-height: 500px;
+    background-color: black;
+    border-radius: 25px 0;
+    color: white;
     .pt-one {
-      flex: 1;
+      width: 120px;
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-evenly;
       .tabs{
-        border: deeppink 1px dashed;
+      
         list-style-type: none;
         padding: 0;
         display: flex;
@@ -420,31 +485,58 @@ figure {
         align-items: stretch;
         justify-content: space-evenly;
         margin: 25px 0;
-        .tab {
-          border: deeppink 1px dashed;
-          width: 100%;
-          text-align: center;
+        .interest-tab.is-active {
+          background-color: #D803F5;
+          color: white;
+        }
+        .interest-tab:focus {
+          outline: none;
+        }
+        .interest-tab {
+          margin: 20px 0;
+          height: 30px;
+          border-radius: 10px;
+          border: none;
+          background:rgb(255, 255, 255);
         }
       }
     }
     .pt-two {
-      flex: 5;
+      border: white solid 1px;
+      flex: 1;
     }
     .pt-three {
-      flex: 1;
+      width: 180px;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          width: 100%;
+        }
+        .social {
+          height: 70px;
+          width: 70px;
+          margin: 20px;
+          a {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
     }
     article {
       min-height: 350px;
       padding: 10px;
       margin: 10px;
-      border: deeppink 1px dashed;
-      
     }
   }
 }
 
 #contact {
-  background-color: lightgoldenrodyellow;
+  background: url(../images/svg-bgs/HoneycombHalf.svg) no-repeat left bottom, linear-gradient(180deg, white 20%, rgb(180,180,180) 100%);
+  background-size: contain, cover;
   min-height: 90vh;
 
   .content {
@@ -457,7 +549,7 @@ figure {
     flex-direction: row;
     justify-content: center;
     width: 600px;
-    border: deeppink 1px dashed;
+  
     .abs {
       top: 0px;
       display: block;
@@ -465,13 +557,33 @@ figure {
       z-index: 3;
       line-height: 120px;
       font-size: 210px;
+      a {
+        width: 200px;
+        height: 160px;
+        span {
+          text-align: center;
+          color: black;
+        }
+        .github-logo {
+          margin-top: -30px;
+          padding-left: 17px;
+          height: 180px;
+          width: 180px;
+        }
+        .linkedin-logo {
+          margin-top: -25px;
+          margin-left: 21px;
+          height: 160px;
+          width: 160px;
+        }
+      }
     }
 
   }
 }
 .elem-spacer {
-  height: 300px;
-  border: deeppink 1px dashed;
+  height: 600px;
+
 
 }
 
@@ -532,6 +644,19 @@ figure {
   display: none;
 }
 
+.footer {
+  width: 100%;
+  background: black;
+  color: white;
+  font-size: 12px;
+  p {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+}
+
+
 @media (max-width:800px), (pointer:coarse) and (orientation: portrait) {
   .content {
     flex-direction: column;
@@ -539,7 +664,8 @@ figure {
   }
   #intro {
     .title-container {
-      width: 80vw;
+      width: 70vw;
+      margin-bottom: 0;
     }
   }
   #nav {
@@ -553,6 +679,13 @@ figure {
       flex-direction: column;
       width: 90vw;
       min-width: 600px;
+      .pt-two {
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        
+
+      }
     }
   }
   #skills {
@@ -564,7 +697,10 @@ figure {
         height: 350px;
         flex-direction: row;
         .learning{
-          width: 250px;
+          margin: 25px 10px;
+          h3 {
+            width: 140px;
+          }
         }
       }
     }
@@ -574,6 +710,15 @@ figure {
       flex-direction: column;
       width: 90vw;
       min-width: 600px;
+      height: 100%;
+      .pt-one {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+      }
+      .pt-two {
+        margin-top: 0px;
+        padding-top: 0px;
+      }
     }
   }
   #about {
@@ -581,7 +726,7 @@ figure {
       flex-direction: column;
       width: 90vw;
       min-width: 600px;
-      
+    
       .pt-one {
         min-height: 70px;
         height: 70px;
@@ -593,16 +738,21 @@ figure {
           flex-direction: row;
           align-items: center;
           margin: 0 5px;
-          .tab {
+          .interest-tab {
             padding: 5px 0;
-            margin: 5px;
-            width: 100px;
+            margin: 4px;
+            width: 90px;
           }
         }
       }
       .pt-three {
-        height: 80px;
-        min-height: 80px;
+        width: 100%;
+        margin-top: 0;
+        min-height: 140px;
+        
+        div {
+          flex-direction: row;
+        }
       }
     }
   }
@@ -626,6 +776,10 @@ figure {
         margin-left: 120px;
       }
     }
+  }
+  .elem-spacer {
+    height: 
+    120px;
   }
   
 }

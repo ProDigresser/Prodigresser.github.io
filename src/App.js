@@ -17,6 +17,9 @@ const App = () => {
     < Exp />
     < About />
     < Contact />
+    <div className="footer">
+      <p>Lovingly crafted by Laurence Walshe <span className="green">//</span> 2020 <span className="green">//</span> In React.js 16.13</p>
+    </div>
   </main>
 }
 
