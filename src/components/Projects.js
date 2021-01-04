@@ -100,7 +100,7 @@ const Slides = ({ project }) => {
             <div className="name-container proj-name-cont" >
               <p>{tech.name}</p>
             </div>
-            <img src={tech.svg} alt={tech.name} />
+            <img src={tech.svg} alt={tech.name} className="devicon" />
           </div>
         })}
       </div>
@@ -110,7 +110,8 @@ const Slides = ({ project }) => {
     </article>
     <article className="pt-two">
       <div className="proj-text">
-        {project.desc}
+        <p>{project.desc}</p>
+        
       </div>
       <div className="proj-nav">
         <a href={project.page} target="_blank" rel="noreferrer" className="page-link">

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 $roberto: 'Roboto Mono', monospace;
+$filter: brightness(0) saturate(100%) invert(33%) sepia(87%) saturate(4138%) hue-rotate(275deg) brightness(106%) contrast(92%);
 
 * {
   box-sizing: border-box;
@@ -29,7 +30,7 @@ figure {
 }
 
 .buttons {
-  background: rgba(33,33,33,0.5);
+  background: rgba(0,0,0,0.7);
   height: 50px;
   min-width: 300px;
   width: 55vw;
@@ -39,6 +40,7 @@ figure {
   align-items: center;
   justify-content: center;
   border-radius: 20px 20px 0 0;
+  border: solid white 2px;
 }
 
 .proj-button {
@@ -60,7 +62,7 @@ figure {
 
 #intro {
   min-height: 90vh;
-  background: url(../images/svg-bgs/HoneycombPage01.svg) no-repeat center center, white;
+  background: url(../images/svg-bgs/HoneycombPage01.svg) no-repeat center center, #4A4A4A;
   background-size: cover, cover;
   .image-container {
     padding: 20px;
@@ -136,8 +138,8 @@ figure {
     }
   }
   .title-container{
-    background: rgb(74,74,74);
-    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
+    // background: rgb(74,74,74);
+    // background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
     border-radius: 25px 0;
     margin: 40px 10px 40px 0;
     padding: 20px;
@@ -198,7 +200,7 @@ figure {
 }
 
 #projects {
-  background: url(../images/svg-bgs/HoneycombBorderWhite01v2.svg) no-repeat left bottom, linear-gradient(180deg, rgb(74,74,74) 20%, rgb(44,44,44) 100%);
+  background: url(../images/svg-bgs/HoneycombBorderBlack01v2.svg) no-repeat left bottom, linear-gradient(0deg, rgb(74,74,74) 20%, rgb(44,44,44) 100%);
   min-height: 95vh;
   color: white;
   .content {
@@ -212,7 +214,7 @@ figure {
     display: flex;
     flex-direction: row;
     width: 800px;
-    background-color: rgb(44,44,44);
+    border: 5px white solid;
     border-radius: 25px 0;
 
     article {
@@ -228,9 +230,6 @@ figure {
         flex-wrap: nowrap;
         height: 100px;
         justify-content: start;
-        .proj-name-cont.name-container {
-          background: linear-gradient(0deg, rgba(44,44,44, 1) 20%, rgba(44,44,44,0.5) 100%);
-        }
       }
       .proj-img{
         flex: 8;
@@ -258,12 +257,7 @@ figure {
           margin: 0;
           padding: 10px;
         }
-        .skill-box:hover .name-container {
-          background: none;
-        }
-        .skill-box:hover svg path {
-          fill: #D803F5;
-        }
+
 
       }
     }
@@ -271,7 +265,7 @@ figure {
 }
 
 #skills {
-  background: url(../images/svg-bgs/HoneycombBorderBlack01v2.svg) no-repeat left bottom, linear-gradient(180deg, rgb(255, 255, 255) 20%, rgba(44,44,44,0.7) 100%);
+  background: url(../images/svg-bgs/HoneycombBorderBlack01v2.svg) no-repeat left bottom, linear-gradient(180deg, black 20%, rgba(44,44,44,1) 80%);
   color: #FFFF;
   min-height: 95vh;
 
@@ -314,7 +308,8 @@ figure {
 
         .learning-skills {
           display: flex;
-          flex-direction: row;          
+          flex-direction: row;
+          width: 220px;          
           .skill-box {
             flex: 1;
             width: 100px;
@@ -328,7 +323,7 @@ figure {
       }
     }
     .pt-two {
-      flex: 2;
+      
       display: flex;
       justify-content: center;
 
@@ -338,7 +333,7 @@ figure {
       padding: 10px;
       margin: 10px;
       border-radius: 25px 0px;
-      background: rgb(74,74,74);
+      border: solid white 5px;
     }
   }
 }
@@ -349,7 +344,7 @@ figure {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 460px;
   
 }
 .skill-box{
@@ -366,13 +361,11 @@ figure {
     visibility: hidden;
     opacity: 0;
     border-radius: 10px;
-    background: rgb(74,74,74);
-    background: linear-gradient(0deg, rgba(74, 74, 74, 1) 30%, rgba(74,74,74,0.5) 100%);
     transition: visibility 0s, opacity 0.25s linear;
     p {
-      color: #D803F5;
+      color: white;
       text-align: center;
-      margin-top: 70%;
+      margin-top: 90%;
       user-select: none;
     }
   }
@@ -380,9 +373,14 @@ figure {
     height: 80%;
   }
 }
-.skill-box:hover .name-container {
+.skill-box:hover {
+  .name-container {
   visibility: visible;
   opacity: 1;
+  }
+  .devicon {
+    filter: $filter;
+  }
 }
 
 #exp {
@@ -395,7 +393,8 @@ figure {
     justify-content: center;
     width: 800px;
     height: 280px;
-    background-color: white;
+    border: solid white 5px;
+    color: white;
     padding: 20px;
     border-radius: 25px 0;
 
@@ -413,6 +412,8 @@ figure {
         align-items: center;
         justify-content: center;
         .logo {
+          background-color: white;
+          border-radius: 5px;
           height: 155px;
           width: 155px;
           padding: 5px;
@@ -459,7 +460,7 @@ figure {
 }
 
 #about {
-  background: url(../images/svg-bgs/HoneycombBorderWhite01v2.svg) no-repeat left bottom, linear-gradient(180deg, rgb(74,74,74) 20%, rgb(11,11,11) 100%);
+  background:  linear-gradient(180deg, rgb(74,74,74) 20%, rgb(11,11,11) 100%);
   min-height: 80vh;
   .about-box {
     margin: 40px 0;
@@ -468,7 +469,8 @@ figure {
     justify-content: center;
     width: 800px;
     min-height: 500px;
-    background-color: black;
+    border: solid white 5px;
+    // background-color: black;
     border-radius: 25px 0;
     color: white;
     .pt-one {
@@ -532,6 +534,12 @@ figure {
       margin: 10px;
     }
   }
+}
+
+#spacer {
+  background: url(../images/svg-bgs/HoneycombBorderWhite01v2.svg) no-repeat left bottom, linear-gradient(180deg, rgb(11,11,11) 98%, white 100%);
+  background-size: cover, cover;
+  height: 250px;
 }
 
 #contact {
@@ -701,6 +709,9 @@ figure {
           h3 {
             width: 140px;
           }
+          .learning-skills {
+            width:140px
+          }
         }
       }
     }
@@ -745,6 +756,9 @@ figure {
           }
         }
       }
+      .pt-two {
+        order: 1;
+      }
       .pt-three {
         width: 100%;
         margin-top: 0;
@@ -784,3 +798,8 @@ figure {
   
 }
 
+@media (min-width:1600px) {
+  #contact {
+    background-size: cover, cover;
+  }
+}

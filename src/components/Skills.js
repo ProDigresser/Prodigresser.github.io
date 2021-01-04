@@ -24,7 +24,7 @@ const Skills = () => {
                     <p>{skill.name}</p>
 
                   </div>
-                  <img src={skill.svg} alt={skill.name} />
+                  <img src={skill.svg} alt={skill.name} className="devicon" />
                 </div>
               })}
             </div>
