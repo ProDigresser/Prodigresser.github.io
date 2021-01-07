@@ -6,7 +6,7 @@ const Intro = () => {
     <section className="content">
       <div className="title-container">
         <Typing speed={80}>
-          <h1 className="title"><span className="green">//</span> Laurence Walshe</h1>
+          <h1 className="title"><span className="green">{'//'}</span> Laurence Walshe</h1>
           <Typing.Delay ms={500} />
           <Typing.Speed ms={30} />
           <h2>Software Engineer</h2>

@@ -28,13 +28,12 @@ const About = () => {
   }
 
   const currentInterest = interestArr[interestIndex]
-  console.log(currentInterest)
 
   return <section className="section" id="about">
     <section className="content">
       <div className="about-box">
         <article className="pt-one">
-          <h3><span className="green">//</span> A Little About Me</h3>
+          <h3><span className="green">{'//'}</span> A Little About Me</h3>
           <ul className="tabs">
             {aboutMeArr.map((interest, i) => {
               return <button className={`${interest.isActive} interest-tab`} value={i} key={interest.title} onClick={handleChangeInterest}>{interest.title}</button>
@@ -42,11 +41,13 @@ const About = () => {
           </ul>
         </article>
         <article className="pt-two">
-          <div>images</div>
+          <div className="img-cont">
+            <img src={currentInterest.image} />
+          </div>
         </article>
         <article className="pt-three">
           <div>
-            <h3><span className="green">//</span> {currentInterest.title}</h3>
+            <h3><span className="green">{'//'}</span> {currentInterest.title}</h3>
             <p>{currentInterest.desc}</p>
             <div className="social">
               {currentInterest.title === 'Relaxation' &&

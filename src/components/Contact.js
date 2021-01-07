@@ -1,6 +1,7 @@
 import React from 'react'
-import linkedin from '../images/ed-logos/linkedin-logo.png'
-import github from '../images/svg-icons/github-black.svg'
+import linkedin from '../images/hexes/linkedin-hex.svg'
+import github from '../images/hexes/github-hex.svg'
+import hex from '../images/hexes/empty-hex.svg'
 
 const Contact = () => {
 
@@ -9,29 +10,31 @@ const Contact = () => {
   return <section className="section" id="contact">
     <section className="content">
       <div className="contact-box">
-        <div className="hex-box hex-one">
-          <div className="hexagon ">
-            <div className="abs"><a target="_blank" rel="noreferrer" href={myMailto}><span>@</span></a></div>
-            <span></span>
-          </div>
-          <div className="lat-spacer"></div>
+        <div className="column">
+          <a target="_blank" rel="noreferrer" href={myMailto}>
+            <div className="hex-box hex-left">
+              <img src={hex} alt="Contact" className="hex" />
+              <div className="abs"><span>@</span></div>
+            </div>
+          </a>
         </div>
-        <div className="hex-box hex-two">
+        <div className="column">
           <div className="spacer"></div>
-          <div className="lat-spacer"></div>
-          <div className="hexagon">
-            <div className="abs"><a target="_blank" rel="noreferrer" href="https://github.com/ProDigresser"><img className="github-logo" src={github} alt="github"/></a></div>
-            <span></span>
-          </div>
+          <a href="https://github.com/ProDigresser" target="_blank" rel="noreferrer">
+            <div className="hex-box hex-right">
+              <img src={github} alt="GitHub" />
+            </div>
+          </a>
         </div>
-        <div className="hex-box hex-three">
+        <div className="column">
           <div className="spacer"></div>
           <div className="spacer"></div>
-          <div className="hexagon">
-            <div className="abs"><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/laurence-walshe/"><img className="linkedin-logo"src={linkedin} alt="linkedin"/></a></div>
-            <span></span>
-          </div>
-          <div className="lat-spacer"></div>
+          <a href="https://www.linkedin.com/in/laurence-walshe/" target="_blank" rel="noreferrer">
+            <div className="hex-box hex-left">
+              <img src={linkedin} alt="Linkedin" />
+            </div>
+          </a>
+
         </div>
       </div>
       <div className="elem-spacer"></div>

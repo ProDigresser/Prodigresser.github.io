@@ -15,6 +15,7 @@ import webpack from '../images/svg-icons/webpack-plain.svg'
 import mongo from '../images/svg-icons/mongodb-plain.svg'
 import postgre from '../images/svg-icons/postgresql-plain.svg'
 import bulma from '../images/svg-icons/bulma-plain.svg'
+import bootstrap from '../images/svg-icons/bootstrap-plain.svg'
 import heroku from '../images/svg-icons/heroku-plain.svg'
 
 const skillArray = [
@@ -35,6 +36,7 @@ const skillArray = [
   { name: 'MongoDB', svg: mongo },
   { name: 'PostgreSQL', svg: postgre },
   { name: 'Bulma', svg: bulma },
+  { name: 'Bootstrap', svg: bootstrap },
   { name: 'Heroku', svg: heroku }
 ]
 

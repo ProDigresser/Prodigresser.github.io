@@ -8,6 +8,7 @@ import Exp from './components/Exp'
 import About from './components/About'
 import Contact from './components/Contact'
 import Spacer from './components/Spacer'
+import Footer from './components/Footer'
 
 const App = () => {
   return <main>
@@ -19,9 +20,7 @@ const App = () => {
     < About />
     < Spacer />
     < Contact />
-    <div className="footer">
-      <p>Lovingly crafted by Laurence Walshe <span className="green">//</span> 2020 <span className="green">//</span> In React.js 16.13</p>
-    </div>
+    < Footer />
   </main>
 }
 

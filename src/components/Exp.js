@@ -78,13 +78,13 @@ const Exp = () => {
           <div className="logo-cont">
             <img className="logo" src={expArr[expIndex].img} alt={expArr[expIndex].org} />
             <div className="subhead">
-              <h4><span className="green">//</span> {expArr[expIndex].org}</h4>
+              <h4><span className="green">{'//'}</span> {expArr[expIndex].org}</h4>
             </div>
           </div>
         </article>
         <article className="pt-two">
           <div className="description">
-            <h3>{expArr[expIndex].name} <span className="green">—</span> {expArr[expIndex].date} <span className="green">//</span> {expArr[expIndex].end}</h3>
+            <h3>{expArr[expIndex].name} <span className="green">—</span> {expArr[expIndex].date} <span className="green">{'//'}</span> {expArr[expIndex].end}</h3>
             <p>{expArr[expIndex].desc}</p>
           </div>
           <div className='buttons exp-nav'>
