@@ -1,7 +1,11 @@
 import React from 'react'
+import hexagon from '../images/profile-hex.png'
 import Typing from 'react-typing-animation'
 
 const Intro = () => {
+
+  
+
   return <section className="section" id="intro">
     <section className="content">
       <div className="title-container">
@@ -18,15 +22,14 @@ const Intro = () => {
           <h2>Web Developer</h2>
           <Typing.Delay ms={500} />
           <Typing.Speed ms={30} />
-          <h2>Hospitality Pro<Typing.Speed ms={400} />...</h2>
+          <h2>Hospitality Pro<Typing.Speed ms={400} />...</h2><Typing.Delay ms={10000000000} />
         </Typing>
+        
+        
       </div>
-      <figure className="image-container">
-        <div className="hexagon">
-          <div className="hexTop"></div>
-          <div className="hexBottom"></div>
-        </div>
-      </figure>
+      <div className="image-container">
+        <img src={hexagon} alt="Profile Image" className="profile"/>
+      </div>
     </section>
 
   </section>

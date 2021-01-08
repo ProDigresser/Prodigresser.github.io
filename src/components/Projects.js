@@ -173,6 +173,10 @@ const Image = ({ image }) => {
   const hideLightBox = () => {
     setLightBoxDisplay(false)
   }
+  
+  // const width = 100%
+
+
 
   return <div className="proj-img" >
     <div
@@ -196,13 +200,18 @@ const Image = ({ image }) => {
       </div>
       {lightboxDisplay ?
         <div id="lightbox" >
-          <div className="lightbox-cont">
+          <div className="lightbox-cont"
+
+          >
             {imageArr.map((image, i) => {
               if (i !== imageIndex) {
                 return
               } else {
                 return <Fade key={i}>
-                  <img id="lightbox-img" src={image.img} onClick={hideLightBox}></img>
+                  <img 
+                    id="lightbox-img" src={image.img} onClick={hideLightBox}
+                    style={{ height: {}, maxWidth: '95wv', width: '100%' }}
+                  ></img>
                   <div className="magnify">
                     <img src={exit} alt="Exit" />
                   </div>

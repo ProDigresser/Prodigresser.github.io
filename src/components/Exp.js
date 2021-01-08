@@ -88,11 +88,11 @@ const Exp = () => {
             <p>{expArr[expIndex].desc}</p>
           </div>
           <div className='buttons exp-nav'>
-            <button className='proj-button' onClick={handleLeftButton}>⁍</button>
+            <button className='proj-button' onClick={handleLeftButton}>⁌</button>
             {expArr.map((exp, i) => {
               return <button value={i} className={`${exp.isActive} proj-button`} onClick={handleChangeProj} key={i}>＊</button>
             })}
-            <button className='proj-button' onClick={handleRightButton}>⁌</button>
+            <button className='proj-button' onClick={handleRightButton}>⁍</button>
           </div>
         </article>
       </div>
