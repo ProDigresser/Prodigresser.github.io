@@ -49,12 +49,12 @@ const About = () => {
           <div>
             <h3><span className="green">{'//'}</span> {currentInterest.title}</h3>
             <p>{currentInterest.desc}</p>
-            <div className="social">
-              {currentInterest.title === 'Relax' &&
-                <a className="insta-link" href="https://www.instagram.com/culinary.necromancy/" target="_blank" rel="noreferrer"><img src={instagramLogo} alt="Instagram" /></a>
-              }
+          </div>
+          <div className="social">
+            {currentInterest.title === 'Relax' &&
+              <a className="insta-link" href="https://www.instagram.com/culinary.necromancy/" target="_blank" rel="noreferrer"><img src={instagramLogo} alt="Instagram" /></a>
+            }
 
-            </div>
           </div>
         </article>
       </div>
