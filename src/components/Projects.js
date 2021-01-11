@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import skillArray from '../API/skills'
 import projects from '../API/projects'
 import link from '../images/svg-icons/link-new.svg'
@@ -119,6 +119,7 @@ const Slides = ({ project }) => {
         <a href={project.page} target="_blank" rel="noreferrer" className="page-link">
           <div className="skill-box">
             <div className="name-container" >
+              <p><span className="green">Project</span> </p>
             </div>
             <img src={linkObj.svg} alt={linkObj.name} />
           </div>
@@ -126,6 +127,7 @@ const Slides = ({ project }) => {
         <a href={project.github} target="_blank" rel="noreferrer" className="page-link">
           <div className="skill-box">
             <div className="name-container" >
+              <p><span className="green">Readme</span> </p>
             </div>
             <img src={skillArray[3].svg} alt={skillArray[3].name} />
           </div>
@@ -173,15 +175,14 @@ const Image = ({ image }) => {
   const hideLightBox = () => {
     setLightBoxDisplay(false)
   }
-  
-  // const width = 100%
+
+
 
 
 
   return <div className="proj-img" >
     <div
       className="img-cont"
-    // style={{ background: `url(${imageArr[imageIndex].img})` }}
     >
       <div className="border">
         {imageArr.map((image, i) => {
@@ -200,16 +201,16 @@ const Image = ({ image }) => {
       </div>
       {lightboxDisplay ?
         <div id="lightbox" >
-          <div className="lightbox-cont"
-
+          <div
+            className="lightbox-cont" onClick={hideLightBox}
           >
             {imageArr.map((image, i) => {
               if (i !== imageIndex) {
                 return
               } else {
                 return <Fade key={i}>
-                  <img 
-                    id="lightbox-img" src={image.img} onClick={hideLightBox}
+                  <img
+                    id="lightbox-img" src={image.img} 
                     style={{ height: {}, maxWidth: '95wv', width: '100%' }}
                   ></img>
                   <div className="magnify">

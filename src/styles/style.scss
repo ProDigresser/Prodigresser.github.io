@@ -4,7 +4,7 @@ $roberto: 'Roboto Mono', monospace;
 $filter: invert(51%) sepia(99%) saturate(5892%) hue-rotate(324deg) brightness(100%) contrast(103%);
 $green:  #FF2A6D;
 $davy-grey: #525252;
-$ash-grey: #b3bfb8;
+$ash-grey: #969696;
 
 * {
   box-sizing: border-box;
@@ -79,10 +79,11 @@ main {
 }
 
 #intro {
+  padding: 0;
   .content {
     width: 100%;
     max-width: 100%;
-    padding: 40px;
+    padding: 0 40px;
   }
   min-height: 90vh;
   background: url(../images/svg-bgs/HoneycombPage01.svg) no-repeat center center, url(../images/svg-bgs/HoneycombBorderGrey01v2.svg) no-repeat left bottom, $ash-grey;
@@ -145,13 +146,12 @@ main {
     list-style-type: none;
     padding: 0;
     li {
-
       a {
         text-decoration: none;
       }
     }
     .nav-button {
-      font-size: 1.25rem;
+      font-size: 1rem;
       border: $davy-grey 2px solid;
       border-radius: 4px;
       height: 7vh;
@@ -321,14 +321,15 @@ main {
 #lightbox-img {
   height: 100%;
   width: 100%;
-
 }
 
 .lightbox-cont {
   background-color: $ash-grey;
   border: solid black 3px;
-  height: 48vw;
-  width: 96vw;
+  max-height: 90vh;
+  min-height: 60%;
+  width: 150vh;
+  max-width: 95vw;
   position: relative;
   display: flex;
   .magnify {
@@ -671,7 +672,7 @@ main {
   }
 }
 .elem-spacer {
-  height: 600px;
+  height: 250px;
 }
 
 .spacer {
@@ -720,6 +721,7 @@ main {
           .nav-button{
             width: 100%;
             margin: 0;
+            font-size: 1.5rem;
           }
         }
         
