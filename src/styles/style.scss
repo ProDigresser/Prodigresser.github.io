@@ -335,7 +335,7 @@ main {
   .magnify {
     top: 0;
     left: 0;
-    margin: 3px;
+    margin: 0;
   }
 }
 
@@ -845,6 +845,9 @@ main {
     height: 
     120px;
   }
+  .lightbox-cont {
+    min-height: 0;
+  }
   
 }
 
@@ -868,10 +871,15 @@ main {
   }
 
  
-  #skills .skills-box .pt-one .sec-title  {
-    h2 { font-size: 1.75rem; }
-    p { font-size: 1.25rem; }
-  }
+  #skills .skills-box .pt-one {
+    .sec-title  {
+      height: 100%;
+      margin-bottom: 20px;
+      h2 { font-size: 1.75rem; }
+      p { font-size: 1.25rem; }
+    }
+  } 
+  
       
   #exp .exp-box {
     .pt-one .logo-cont .subhead {
@@ -905,4 +913,5 @@ main {
   .footer {
     font-size: 1.5em;
   }
+
 }
