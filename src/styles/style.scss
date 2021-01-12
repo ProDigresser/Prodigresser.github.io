@@ -695,7 +695,7 @@ main {
 }
 
 
-@media (max-width:820px), (hover:none) {
+@media (max-width:820px), (hover:none), (orientation: portrait) {
   .content {
     flex-direction: column;
     justify-content: center;
@@ -846,7 +846,7 @@ main {
     120px;
   }
   .lightbox-cont {
-    min-height: 0;
+    min-height: 0%;
   }
   
 }
