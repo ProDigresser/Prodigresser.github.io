@@ -1,6 +1,7 @@
 import college from '../images/ed-logos/broastairs-college-logo.jpg'
 import ga from '../images/ed-logos/ga-logo.png'
 import ca from '../images/ed-logos/codecademy-logo.png'
+import ossu from '../images/ed-logos/ossu.png'
 
 const experience = [
   {
@@ -9,6 +10,14 @@ const experience = [
     desc: 'A 12-week, full-time course focused on the full development process. The syllabus consists of 500+ hours of learning and projects, including deep dives into various areas of the development process.',
     img: ga,
     org: 'General Assembly',
+    isActive: 'is-active'
+  },
+  {
+    name: 'Computer Science',
+    date: 'Dec 2020', end: 'Ongoing',
+    desc: 'A part time Computer Science course assembled through a range of free resources, designed to teach all elements of a Computer Science Degree.',
+    img: ossu,
+    org: 'Open Source Society University',
     isActive: 'is-active'
   },
   {

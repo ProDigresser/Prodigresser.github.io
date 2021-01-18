@@ -17,6 +17,7 @@ import postgre from '../images/svg-icons/postgresql-plain.svg'
 import bulma from '../images/svg-icons/bulma-plain.svg'
 import bootstrap from '../images/svg-icons/bootstrap-plain.svg'
 import heroku from '../images/svg-icons/heroku-plain.svg'
+import django from '../images/svg-icons/django-plain.svg'
 
 const skillArray = [
   { name: 'HTML5', svg: html },
@@ -29,15 +30,16 @@ const skillArray = [
   { name: 'Express.js', svg: express },
   { name: 'Python', svg: python },
   { name: 'Flask', svg: flask },
+  { name: 'Django', svg: django },
   { name: 'Sass', svg: sass },
   { name: 'NPM', svg: npm },
   { name: 'VS Code', svg: vscode },
-  { name: 'Webpack', svg: webpack },
   { name: 'MongoDB', svg: mongo },
   { name: 'PostgreSQL', svg: postgre },
   { name: 'Bulma', svg: bulma },
   { name: 'Bootstrap', svg: bootstrap },
-  { name: 'Heroku', svg: heroku }
+  { name: 'Heroku', svg: heroku },
+  { name: 'Webpack', svg: webpack }
 ]
 
 export default skillArray
