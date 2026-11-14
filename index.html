@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Laurence Walshe - software engineer building integrations, infrastructure, and product systems." />
+    <title>Laurence Walshe - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Laurence Walshe home">LW<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#connect">Connect</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="intro-title">
+        <p class="eyebrow">London / Remote · Software engineering</p>
+        <h1 id="intro-title">I build the bits that make products <em>work in the real world.</em></h1>
+        <div class="hero-bottom">
+          <p>I'm Laurence, a product-minded software engineer working across integrations, identity, cloud infrastructure, and connected systems.</p>
+          <a class="button" href="mailto:hello@laurencewalshe.dev">Start a conversation <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="Core technologies">
+        <div>GO <span>✦</span> TYPESCRIPT <span>✦</span> PYTHON <span>✦</span> APIS <span>✦</span> IDENTITY <span>✦</span> CONNECTED SYSTEMS <span>✦</span> GO <span>✦</span> TYPESCRIPT <span>✦</span> PYTHON <span>✦</span></div>
+      </section>
+
+      <section class="work section" id="work" aria-labelledby="work-title">
+        <div class="section-label"><span>01</span><h2 id="work-title">What I work on</h2></div>
+        <div class="capabilities">
+          <article><p class="cap-number">01</p><h3>Integrations &amp; infrastructure</h3><p>Services and APIs that connect third-party platforms, cloud services, on-premises hardware, and the people who rely on them.</p></article>
+          <article><p class="cap-number">02</p><h3>Identity &amp; trust</h3><p>Enterprise SSO, MFA, secure sessions, authentication flows, and the practical details that make access feel simple and safe.</p></article>
+          <article><p class="cap-number">03</p><h3>Product delivery</h3><p>Technical discovery through to rollout: building useful interfaces and dependable systems around real operational problems.</p></article>
+        </div>
+      </section>
+
+      <section class="experience section" aria-labelledby="experience-title">
+        <div class="section-label"><span>02</span><h2 id="experience-title">Recent work</h2></div>
+        <div class="role-list">
+          <article class="role current"><div><p class="role-date">2024 — now</p><h3>Kitt <span>Software Engineer</span></h3></div><p>Building access-control integrations, secure cloud-to-site connectivity, enterprise identity, and workflow tooling.</p></article>
+          <article class="role"><div><p class="role-date">2021 — 2023</p><h3>Vorboss <span>Software Engineer</span></h3></div><p>Containerised deployments, internal operations tooling, and systems that made customer onboarding clearer and faster.</p></article>
+          <article class="role"><div><p class="role-date">2021</p><h3>Vorboss <span>Junior Software Engineer</span></h3></div><p>React, Express, GraphQL, and Airtable tools for people, infrastructure, and business operations.</p></article>
+        </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="section-label"><span>03</span><h2 id="about-title">A little more human</h2></div>
+        <div class="about-grid"><p class="large-copy">Before software, I worked in hospitality. It taught me how to stay calm, pay attention, and make complicated things feel considered.</p><p>I still bring that energy to engineering. Away from the keyboard I make ceramics, chase unusual coffee, and test ambitious recipes.</p></div>
+      </section>
+
+      <section class="connect" id="connect" aria-labelledby="connect-title">
+        <p class="eyebrow">Say hello</p>
+        <h2 id="connect-title">Have a technically knotty problem?</h2>
+        <a class="email" href="mailto:hello@laurencewalshe.dev">hello@laurencewalshe.dev <span aria-hidden="true">↗</span></a>
+        <div class="socials" aria-label="Social links">
+          <a href="https://github.com/ProDigresser">GitHub</a>
+          <a href="https://www.linkedin.com/in/laurencewalshe">LinkedIn</a>
+          <a href="https://www.instagram.com/ProDigresser/">Personal</a>
+          <a href="https://www.instagram.com/ceramic.panic/">Ceramics</a>
+          <a href="https://www.instagram.com/culinary.necromancy/">Cooking</a>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>© <span id="year"></span> Laurence Walshe</span><span>Built with curiosity and good coffee.</span></footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
