@@ -32,7 +32,7 @@
       </section>
 
       <section class="marquee" aria-label="Core technologies">
-        <div class="marquee-track"><span class="marquee-set">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span><span class="marquee-set" aria-hidden="true">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span><span class="marquee-set" aria-hidden="true">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span><span class="marquee-set" aria-hidden="true">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span><span class="marquee-set" aria-hidden="true">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span><span class="marquee-set" aria-hidden="true">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span><span class="marquee-set" aria-hidden="true">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span><span class="marquee-set" aria-hidden="true">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span></div>
+        <div class="marquee-track"><span class="marquee-set">GO <i>✦</i> TYPESCRIPT <i>✦</i> PYTHON <i>✦</i> APIS <i>✦</i> GRPC <i>✦</i> MICROSERVICES <i>✦</i> IDENTITY <i>✦</i> CONNECTED SYSTEMS <i>✦</i></span></div>
       </section>
 
       <section class="work section" id="work" aria-labelledby="work-title">
@@ -72,6 +72,15 @@
     </main>
 
     <footer><span>© <span id="year"></span> Laurence Walshe</span><span>Built with curiosity and good coffee.</span></footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      const marqueeTrack = document.querySelector('.marquee-track');
+      const marqueeSet = marqueeTrack.firstElementChild;
+      for (let index = 1; index < 8; index += 1) {
+        const clone = marqueeSet.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        marqueeTrack.append(clone);
+      }
+    </script>
   </body>
 </html>
