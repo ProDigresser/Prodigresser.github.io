@@ -126,7 +126,7 @@
         const colours = theme === 'forest'
           ? { paper: '#12352b', ink: '#edf4e9', accent: '#f08462' }
           : { paper: '#f7f3fb', ink: '#292342', accent: '#9d4f78' };
-        const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="${colours.paper}"/><path d="M17 16v31h18v-7H25V16zm24 0v24h-8l8 7h7V16z" fill="${colours.ink}"/><circle cx="47.5" cy="47.5" r="3.5" fill="${colours.accent}"/></svg>`;
+        const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="${colours.paper}"/><text x="10" y="43" fill="${colours.ink}" font-family="Arial,sans-serif" font-size="31" font-weight="800" letter-spacing="-4">LW</text><circle cx="51" cy="45" r="3" fill="${colours.accent}"/></svg>`;
         favicon.href = `data:image/svg+xml,${encodeURIComponent(icon)}`;
         themeColor.content = colours.paper;
         if (persist) localStorage.setItem('laurencewalshe-theme', theme);

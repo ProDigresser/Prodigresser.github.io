@@ -10,6 +10,6 @@
     }
   </style>
   <rect class="paper" width="64" height="64" rx="14"/>
-  <path class="ink" d="M17 16v31h18v-7H25V16zm24 0v24h-8l8 7h7V16z"/>
-  <circle class="accent" cx="47.5" cy="47.5" r="3.5"/>
+  <text class="ink" x="10" y="43" font-family="Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="-4">LW</text>
+  <circle class="accent" cx="51" cy="45" r="3"/>
 </svg>
