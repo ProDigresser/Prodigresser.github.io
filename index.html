@@ -3,8 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Laurence Walshe - software engineer building integrations, infrastructure, and product systems." />
-    <title>Laurence Walshe - Software Engineer</title>
+    <meta name="description" content="Laurence Walshe is a product-minded software engineer building integrations, identity, cloud infrastructure, and connected systems." />
+    <meta name="author" content="Laurence Walshe" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f7f3fb" id="theme-color" />
+    <link rel="canonical" href="https://laurencewalshe.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Laurence Walshe" />
+    <meta property="og:url" content="https://laurencewalshe.dev/" />
+    <meta property="og:title" content="Laurence Walshe — Software Engineer" />
+    <meta property="og:description" content="Product-minded software engineer building integrations, identity, cloud infrastructure, and connected systems." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Laurence Walshe — Software Engineer" />
+    <meta name="twitter:description" content="Product-minded software engineer building integrations, identity, cloud infrastructure, and connected systems." />
+    <title>Laurence Walshe — Software Engineer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" id="favicon" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Laurence Walshe",
+        "url": "https://laurencewalshe.dev/",
+        "jobTitle": "Software Engineer",
+        "email": "mailto:hello@laurencewalshe.dev",
+        "sameAs": [
+          "https://github.com/ProDigresser",
+          "https://www.linkedin.com/in/laurencewalshe",
+          "https://www.instagram.com/ProDigresser/",
+          "https://www.instagram.com/ceramic.panic/",
+          "https://www.instagram.com/culinary.necromancy/"
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -86,11 +116,19 @@
         marqueeTrack.append(clone);
       }
       const themeButtons = document.querySelectorAll('[data-theme-choice]');
+      const favicon = document.getElementById('favicon');
+      const themeColor = document.getElementById('theme-color');
       const savedTheme = localStorage.getItem('laurencewalshe-theme');
       const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
       const applyTheme = (theme, persist = false) => {
         document.documentElement.dataset.theme = theme;
         themeButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme)));
+        const colours = theme === 'forest'
+          ? { paper: '#12352b', ink: '#edf4e9', accent: '#f08462' }
+          : { paper: '#f7f3fb', ink: '#292342', accent: '#9d4f78' };
+        const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="${colours.paper}"/><path d="M17 16v31h18v-7H25V16zm24 0v24h-8l8 7h7V16z" fill="${colours.ink}"/><circle cx="47.5" cy="47.5" r="3.5" fill="${colours.accent}"/></svg>`;
+        favicon.href = `data:image/svg+xml,${encodeURIComponent(icon)}`;
+        themeColor.content = colours.paper;
         if (persist) localStorage.setItem('laurencewalshe-theme', theme);
       };
       applyTheme(savedTheme || (systemDarkMode.matches ? 'forest' : 'lavender'));

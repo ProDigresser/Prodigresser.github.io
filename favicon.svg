@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .paper { fill: #f7f3fb; }
+    .ink { fill: #292342; }
+    .accent { fill: #9d4f78; }
+    @media (prefers-color-scheme: dark) {
+      .paper { fill: #12352b; }
+      .ink { fill: #edf4e9; }
+      .accent { fill: #f08462; }
+    }
+  </style>
+  <rect class="paper" width="64" height="64" rx="14"/>
+  <path class="ink" d="M17 16v31h18v-7H25V16zm24 0v24h-8l8 7h7V16z"/>
+  <circle class="accent" cx="47.5" cy="47.5" r="3.5"/>
+</svg>
