@@ -18,6 +18,10 @@
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#connect">Connect</a>
+        <div class="theme-sampler" aria-label="Colour mode">
+          <button type="button" data-theme-choice="lavender" aria-pressed="true">Light</button>
+          <button type="button" data-theme-choice="forest" aria-pressed="false">Dark</button>
+        </div>
       </nav>
     </header>
 
@@ -81,6 +85,19 @@
         clone.setAttribute('aria-hidden', 'true');
         marqueeTrack.append(clone);
       }
+      const themeButtons = document.querySelectorAll('[data-theme-choice]');
+      const savedTheme = localStorage.getItem('laurencewalshe-theme');
+      const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+      const applyTheme = (theme, persist = false) => {
+        document.documentElement.dataset.theme = theme;
+        themeButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme)));
+        if (persist) localStorage.setItem('laurencewalshe-theme', theme);
+      };
+      applyTheme(savedTheme || (systemDarkMode.matches ? 'forest' : 'lavender'));
+      themeButtons.forEach((button) => button.addEventListener('click', () => applyTheme(button.dataset.themeChoice, true)));
+      systemDarkMode.addEventListener('change', (event) => {
+        if (!localStorage.getItem('laurencewalshe-theme')) applyTheme(event.matches ? 'forest' : 'lavender');
+      });
     </script>
   </body>
 </html>
