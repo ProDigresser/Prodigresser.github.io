@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f7f3fb" />
+    <meta name="theme-color" content="#f7f3fb" id="theme-color" />
     <title>Page not found — Laurence Walshe</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script>
+      const savedTheme = localStorage.getItem('laurencewalshe-theme');
+      const theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'forest' : 'lavender');
+      document.documentElement.dataset.theme = theme;
+      document.getElementById('theme-color').content = theme === 'forest' ? '#12352b' : '#f7f3fb';
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <style>
       .missing { min-height:calc(100vh - 160px); display:grid; place-content:center; text-align:center; }
